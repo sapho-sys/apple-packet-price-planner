@@ -3,7 +3,9 @@ function Appleplanner(){
     var qtyApples=0;
     var qtyPerpacket=0
     var percentageRevenue=0;
-    var costOfsales=0;
+    var costPerUnit=0;
+    var costPerPacket=0;
+    var numberOfPackets=0;
 
     function setPricebox(price){
         priceBox=price;
@@ -29,23 +31,35 @@ function Appleplanner(){
         return qtyPerpacket;
     }
 
-    function setcostOfSales(qty){
-        // qtyApples=qty
-        // if(qtyApples > 1){
-        //     costOfsales= (priceBox.toFixed(2) / qtyApples) 
-
-        // }
-
-    }
-    function getCostoFsales(){
-        return costOfsales.toFixed(2)
-    }
+    
     function setPercentage(percentage){
-        percentageRevenue=percentage;
+        percentageRevenue=(percentage / 100);
     }
 
     function getPercentage(){
-        percentageRevenue.toFixed(2)
+        return percentageRevenue.toFixed(2)
+    }
+
+
+    function setcostOfSales(){
+        costPerUnit= (qtyApples/priceBox.toFixed(2))
+       
+    }
+    function getCostPerUnit(){
+        return costPerUnit.toFixed(2)
+    }
+    function setCostPerPacket(){
+        costPerPacket=(costPerUnit.toFixed(2) * qtyPerpacket)
+    }
+    function getCostPerPacket(){
+        return costPerPacket.toFixed(2);
+    }
+    function setNoOfPackets(){
+        numberOfPackets= (qtyApples/qtyPerpacket)
+
+    }
+    function getNoOfPackets(){
+        return numberOfPackets;
     }
 
 
@@ -53,7 +67,7 @@ function Appleplanner(){
 return{
     
     setcostOfSales,
-    getCostoFsales,
+    getCostPerUnit,
     setPricebox,
     getPricebox,
     setPercentage,
@@ -61,7 +75,11 @@ return{
     getQuantity,
     setQuantity,
     setQuantityPacket,
-    getQuantityPacket
+    getQuantityPacket,
+    setCostPerPacket,
+    getCostPerPacket,
+    setNoOfPackets,
+    getNoOfPackets
 
 }
 
