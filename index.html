@@ -10,24 +10,28 @@
     <h1>Apple Packet Planner</h1>
     <section class="entries">
         <small>Cost price for a box of apples</small>
-        <input type="text" class="cost"><br><br>
+        <input type="text" class="cost" value=""><br><br>
         <small>Number of apples in the box</small>
-        <input type="text" class="number"><br><br>
+        <input type="text" class="number" value=""><br><br>
         <small>The packet size the apples are sold in</small>
-        <input type="text" class="size"><br><br>
+        <input type="text" class="size" value=""><br><br>
         <small>Required Profit %</small>
-        <input type="text" class="revenue">
+        <input type="text" class="revenue"><br><br>
+        <button  type="button" class="entry">Calculate</button>
 
     </section>
     <hr>
     <section class="information">
         <label for="number of packets">Number of packets:<span class="packets"></span></label><br><br>
-        <label for="cost price per apple">Cost price per apple:<span class="packets"></span></label><br><br>
+        <label for="cost price per apple">Cost price per apple:<span class="costApple"></span></label><br><br>
 
-        <label for="cost price per packet">Cost price per packet:<span class="packets"></span></label><br><br>
+        <label for="cost price per packet">Cost price per packet:<span class="costPacket"></span></label><br><br>
         <label for="R packet price">Recommended packet price:<span class="packets"></span></label><bbr></bbr>
 
     </section>
+
+    <script src="/tests/factory.js" charset="utf8"></script>
+    <script src="/js/DOM.js" charset="utf-8"></script>
     
 </body>
 </html>

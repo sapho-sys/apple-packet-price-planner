@@ -6,6 +6,7 @@ function Appleplanner(){
     var costPerUnit=0;
     var costPerPacket=0;
     var numberOfPackets=0;
+    var revenue=0;
 
     function setPricebox(price){
         priceBox=price;
@@ -38,6 +39,13 @@ function Appleplanner(){
 
     function getPercentage(){
         return percentageRevenue.toFixed(2)
+    }
+    function setRevenue(){
+        revenue=(costPerPacket * percentageRevenue.toFixed(2))
+
+    }
+    function getRevenue(){
+        return revenue.toFixed(2);
     }
 
 
@@ -79,7 +87,9 @@ return{
     setCostPerPacket,
     getCostPerPacket,
     setNoOfPackets,
-    getNoOfPackets
+    getNoOfPackets,
+    setRevenue,
+    getRevenue
 
 }
 

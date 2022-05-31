@@ -63,6 +63,11 @@ describe("apple packet app testing", function(){
             assert.equal(4, Instance.getQuantityPacket())
             assert.equal(5, Instance.getNoOfPackets())
         })
+        it("should calculate the selling price per packet", function(){
+            let Instance=Appleplanner();
+         
+
+        })
     })
 
 
