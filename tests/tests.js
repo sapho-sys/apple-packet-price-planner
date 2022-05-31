@@ -65,6 +65,23 @@ describe("apple packet app testing", function(){
         })
         it("should calculate the selling price per packet", function(){
             let Instance=Appleplanner();
+            Instance.setPricebox(22.50);
+            Instance.setQuantity(10);
+
+            Instance.setQuantityPacket(10);
+            Instance.setcostOfSales();
+            Instance.setCostPerPacket();
+            Instance.setPercentage(3.44)
+            Instance.setRevenue();
+
+
+            assert.equal(10, Instance.getQuantityPacket())
+            assert.equal(22.50,Instance.getPricebox());
+            assert.equal(0.44, Instance.getCostPerUnit())
+            assert.equal(4.40, Instance.getCostPerPacket())
+            assert.equal(0.03, Instance.getPercentage())
+            assert.equal(0.13, Instance.getRevenue())
+
          
 
         })
