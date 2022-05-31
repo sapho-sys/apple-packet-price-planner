@@ -28,6 +28,18 @@ calcBtn.addEventListener("click", function(){
         instanceFactory.setNoOfPackets();
 
         dispNumPacks.innerHTML=instanceFactory.getNoOfPackets();
+
+
+        instanceFactory.setPricebox(Number(costPrice.value))
+
+        instanceFactory.setQuantity(Number(numApples.value))
+        instanceFactory.setQuantityPacket(Number(packetSize.value))
+        instanceFactory.setcostOfSales();
+        instanceFactory.setNoOfPackets();
+        instanceFactory.setCostPerPacket();
+        dispCostPerPack.innerHTML=instanceFactory.getCostPerPacket();
+        
+
         
 
     
